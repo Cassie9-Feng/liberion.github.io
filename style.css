@@ -96,14 +96,16 @@
 }
 
 body {
-    background-color: #3d3b42;
     margin: 0;
     height: 200vh;
+    overflow-x: hidden;
+    background: linear-gradient(#3d3b42, #7597de);
 }
 
 .nav-flex {
     background-color: #ffffff;
-    height: 7rem;
+    z-index: 111;
+    height: 5.5rem;
     width: 95%;
     margin: 1rem 1.5rem 1rem 1.5rem;
     display: flex;
@@ -117,10 +119,10 @@ body {
     z-index: 111;
     position: relative;
     background-color: #ffffff;
-    height: 2.5rem;
+    height: 1.8em;
     width: 90%;
-    border: 0.6rem solid black;
-    padding: 1rem;
+    border: 0.4rem solid black;
+    padding: 0.7rem;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -130,7 +132,7 @@ body {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    height: 2.5rem;
+    height: 1.8rem;
     width: 90%;
     padding: 0;
     margin: 0;
@@ -181,28 +183,81 @@ body {
     }
 }
 
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
 
+section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #1c0522, transparent);
+    z-index: 100;
+}
 
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    pointer-events: none;
+}
 
+section img#moon {
+    mix-blend-mode: screen;
+}
 
+section img#mountains_front {
+    z-index: 10;
+    margin-top: 5rem;
+}
 
+#text {
+    font-family: 'poppinsmedium';
+    position: absolute;
+    right: -350px;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
+}
 
+#btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #2b1055;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px);
+}
 
+.sec {
+    position: relative;
+    padding: 100px;
+    background: #1c0522;
+}
 
+.sec h2 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.sec p {
+    font-size: 1em;
+    color: #fff;
+}
