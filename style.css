@@ -1,39 +1,208 @@
-<!DOCTYPE html>
-<html lang="en">
+/* fonts */
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liberion</title>
-    <link href="style.css" rel="stylesheet">
-</head>
+@font-face {
+    font-family: 'impact';
+    src: url("https://static.igem.wiki/teams/5184/fonts/impact-webfont.woff")
+}
 
-<body>
-    <nav class="nav-flex">
-        <div class="menu">
-            <ul class="menu-box">
-                <li>
-                    <a href="index.html" class="menutitle">BACKGROUND</a>
-                </li>
+@font-face {
+    font-family: 'extenda';
+    src: url("https://static.igem.wiki/teams/5184/fonts/extenda-40-hecto-trial-webfont.woff")
+}
 
-                <li>
-                    <a href="organization.html" class="menutitle">ORGANIZATION</a>
-                </li>
+@font-face {
+    font-family: 'poppins';
+    src: url("https://static.igem.wiki/teams/5184/fonts/poppins-black-webfont.woff")
+}
 
-                <li>
-                    <a href="character.html" class="menutitle">CHARACTER</a>
-                </li>
+@font-face {
+    font-family: 'dingosstamp';
+    src: url("https://static.igem.wiki/teams/5184/fonts/dingos-stampblack.woff");
+}
 
-                <li>
-                    <a href="plot.html" class="menutitle">PLOT</a>
-                </li>
+@font-face {
+    font-family: 'guerrilla';
+    src: url("https://static.igem.wiki/teams/5184/fonts/guerrilla-normal.woff");
+}
 
-            </ul>
-        </div>
-    </nav>
+@font-face {
+    font-family: 'magnifico';
+    src: url("https://static.igem.wiki/teams/5184/fonts/magnifico.woff");
+}
+
+@font-face {
+    font-family: 'peacesans';
+    src: url("https://static.igem.wiki/teams/5184/fonts/peacesans.woff");
+}
+
+@font-face {
+    font-family: 'poppinsmedium';
+    src: url("https://static.igem.wiki/teams/5184/fonts/poppins-medium-webfont.woff");
+}
+
+@font-face {
+    font-family: 'anton';
+    src: url("https://static.igem.wiki/teams/5184/fonts/anton.woff");
+}
+
+@font-face {
+    font-family: 'kunika';
+    src: url("https://static.igem.wiki/teams/5184/fonts/kunika.woff");
+}
+
+@font-face {
+    font-family: 'iconfontsidebar';
+    src: url('https://static.igem.wiki/teams/5184/fonts/iconfont.woff2?t=1727624921257') format('woff2'), url('https://static.igem.wiki/teams/5184/fonts/iconfont.woff?t=1727624921257') format('woff'), url('https://static.igem.wiki/teams/5184/fonts/iconfont.ttf?t=1727624921257') format('truetype');
+}
+
+@font-face {
+    font-family: 'iconfontsafety';
+    src: url('https://static.igem.wiki/teams/5184/fonts/iconfont-safety.woff');
+}
+
+@font-face {
+    font-family: 'iconfont-contribution';
+    src: url('https://static.igem.wiki/teams/5184/fonts/iconfont-contribution.woff');
+}
+
+@font-face {
+    font-family: 'iconfont-hp';
+    src: url('https://static.igem.wiki/teams/5184/fonts/iconfont-hp.woff');
+}
+
+@font-face {
+    font-family: 'iconfont-sustainability';
+    src: url('https://static.igem.wiki/teams/5184/fonts/iconfont-sustainability.woff');
+}
+
+@font-face {
+    font-family: 'iconfont-inclusive';
+    src: url('https://static.igem.wiki/teams/5184/fonts/iconfont-inclusive.woff');
+}
+
+@font-face {
+    font-family: 'iconfont-education';
+    src: url('https://static.igem.wiki/teams/5184/fonts/iconfont-education.woff');
+}
+
+@font-face {
+    font-family: 'iconfont-entrepreneur';
+    src: url('https://static.igem.wiki/teams/5184/fonts/iconfont-entrepreneur2.woff');
+}
+
+@font-face {
+    font-family: 'tenorite';
+    src: url('https://static.igem.wiki/teams/5184/fonts/tenorite.woff');
+}
+
+body {
+    background-color: #3d3b42;
+    margin: 0;
+    height: 200vh;
+}
+
+.nav-flex {
+    background-color: #ffffff;
+    height: 7rem;
+    width: 95%;
+    margin: 1rem 1.5rem 1rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+.menu {
+    list-style-type: none;
+    z-index: 111;
+    position: relative;
+    background-color: #ffffff;
+    height: 2.5rem;
+    width: 90%;
+    border: 0.6rem solid black;
+    padding: 1rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-box {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    height: 2.5rem;
+    width: 90%;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    align-items: center;
+}
+
+
+/* .menu {
+    display: flex;
+    align-items: center;
+    height: 100%;
+} */
+
+.menutitle {
+    font-family: 'poppins';
+    text-decoration: none;
+    color: black;
+    height: 100%;
+    font-size: calc(0.8em + 1.2vw);
+    display: flex;
+    margin: 0.8rem;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.menutitle:hover {
+    font-size: calc(1.2em + 1.2vw);
+    animation: neon-flicker 4s infinite;
+}
+
+@keyframes neon-flicker {
+    0% {
+        color: rgb(126, 4, 0)
+    }
+    30%,
+    32%,
+    34% {
+        color: rgb(0, 0, 0);
+        /* text-shadow: -1px 0px 3px rgb(0, 0, 0), 0px 0px 2px rgb(0, 0, 0); */
+    }
+    31%,
+    33%,
+    35%,
+    100% {
+        color: rgb(234, 8, 0);
+        /* text-shadow: -1px 0px 3px rgb(234, 8, 0), 0px 0px 2px rgb(234, 8, 0); */
+    }
+}
 
 
 
-</body>
 
-</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
