@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liberion</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="nav-flex">
+        <div class="menu">
+            <ul class="menu-box">
+                <li>
+                    <a href="index.html" class="menutitle">BACKGROUND</a>
+                </li>
+
+                <li>
+                    <a href="organization.html" class="menutitle">ORGANIZATION</a>
+                </li>
+
+                <li>
+                    <a href="character.html" class="menutitle">CHARACTER</a>
+                </li>
+
+                <li>
+                    <a href="plot.html" class="menutitle">PLOT</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+
+
+</body>
+
+</html>
