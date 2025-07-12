@@ -164,6 +164,20 @@ body {
     animation: neon-flicker 4s infinite;
 }
 
+#language-switcher {
+    border-radius: 10%;
+    width: 4vw;
+    transition: all 0.5s;
+}
+
+#language-switcher:hover {
+    background-color: #bdbdbd;
+}
+
+#language-switcher span {
+    font-size: calc(0.2em + 0.6vw);
+}
+
 @keyframes neon-flicker {
     0% {
         color: rgb(126, 4, 0)
