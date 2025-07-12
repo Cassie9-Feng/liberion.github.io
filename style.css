@@ -164,6 +164,24 @@ body {
     animation: neon-flicker 4s infinite;
 }
 
+.menutitle-ch {
+    font-family: 'impact';
+    text-decoration: none;
+    color: black;
+    height: 100%;
+    font-size: calc(0.6em + 1.2vw);
+    display: flex;
+    margin: 0.8rem;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.menutitle-ch:hover {
+    font-size: calc(1em + 1.2vw);
+    animation: neon-flicker 4s infinite;
+}
+
+
 #language-switcher {
     border-radius: 10%;
     width: 4vw;
