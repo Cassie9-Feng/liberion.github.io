@@ -33,6 +33,12 @@
                 </li>
 
             </ul>
+
+              </ul>
+            <button id="language-switcher" class="lang-switcher-btn">
+    <span class="zh-text">中文</span>
+</button>
+            
         </div>
     </nav>
     <section>
@@ -79,6 +85,19 @@
             btn.style.marginTop = value * 1.5 + 'px'
             header.style.top = value * 0.5 + 'px'
         })
+        
+        document.getElementById("language-switcher").addEventListener("click", function() {
+            // Get current page filename (e.g. "index.html")
+            const currentPage = window.location.pathname.split('/').pop();
+
+            if (window.location.href.includes("/en/")) {
+                // Currently English - switch to Chinese (go up one level)
+                window.location.href = "../" + currentPage;
+            } else {
+                // Currently Chinese - switch to English (go to en subfolder)
+                window.location.href = "en/" + currentPage;
+            }
+        });
     </script>
 
 </body>
