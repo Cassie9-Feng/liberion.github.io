@@ -14,40 +14,40 @@
         <div class="menu">
             <ul class="menu-box">
                 <li>
-                    <a href="index.html" class="menutitle">BACKGROUND</a>
+                    <a href="index.html" class="menutitle-ch">背景</a>
                 </li>
 
                 <li>
-                    <a href="organization.html" class="menutitle">ORGANIZATION</a>
+                    <a href="organization.html" class="menutitle-ch">组织</a>
                 </li>
 
                 <li>
-                    <a href="character.html" class="menutitle">CHARACTER</a>
+                    <a href="character.html" class="menutitle-ch">角色</a>
                 </li>
 
                 <li>
-                    <a href="plot.html" class="menutitle">PLOT</a>
+                    <a href="plot.html" class="menutitle-ch">情节</a>
                 </li>
                 <li>
-                    <a href="others.html" class="menutitle">OTHERS</a>
+                    <a href="others.html" class="menutitle-ch">杂谈</a>
                 </li>
 
             </ul>
-
-
         </div>
     </nav>
+
     <button id="language-switcher" class="lang-switcher-btn">
-    <span class="en-text-button">中</span>
-    </button>
+    <span class="zh-text-button">EN</span>
+</button>
+
     <section>
-        <img src="../images/stars.png" id="stars">
-        <img src="../images/moon.png" id="moon">
-        <img src="../images/mountains_behind.png" id="mountains_behind">
+        <img src="images/stars.png" id="stars">
+        <img src="images/moon.png" id="moon">
+        <img src="images/mountains_behind.png" id="mountains_behind">
 
-        <h2 id="text">Liberion</h2>
+        <h2 id="text">莱贝里昂</h2>
 
-        <img src="../images/mountains_front.png" id="mountains_front">
+        <img src="images/mountains_front.png" id="mountains_front">
     </section>
     <div class="sec" id="sec">
         <h2>Parallax Scrolling Effects</h2>
@@ -84,18 +84,6 @@
             btn.style.marginTop = value * 1.5 + 'px'
             header.style.top = value * 0.5 + 'px'
         })
-        document.getElementById("language-switcher").addEventListener("click", function() {
-            // Get current page filename (e.g. "index.html")
-            const currentPage = window.location.pathname.split('/').pop();
-
-            if (window.location.href.includes("/en/")) {
-                // Currently English - switch to Chinese (go up one level)
-                window.location.href = "../" + currentPage;
-            } else {
-                // Currently Chinese - switch to English (go to en subfolder)
-                window.location.href = "en/" + currentPage;
-            }
-        });
     </script>
 
 </body>
