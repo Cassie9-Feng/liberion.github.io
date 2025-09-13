@@ -251,11 +251,11 @@ body {
         height: 0.1rem;
         border: 0.1rem solid black;
     }
-    
+/*     
     .menutitle-ch_hidden,
     .menutitle_hidden {
         font-size: calc(0.2em + 0.7vw);
-    }
+    } */
     
     .nav-flex::after {
         content: '';
