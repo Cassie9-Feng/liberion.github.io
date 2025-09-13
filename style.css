@@ -145,6 +145,10 @@ body {
         height: 100%;
         align-items: center;
     }
+        .menu-box li {
+        margin: 0 1vw;
+    }
+    
     /* .menu {
     display: flex;
     align-items: center;
