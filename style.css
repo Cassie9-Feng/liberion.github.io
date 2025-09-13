@@ -96,7 +96,7 @@
 }
 @font-face {
     font-family: 'Hanyilin';
-    src: url('');
+    src: url('fonts/HanYiLingXinTiJian-1.ttf');
 }
 
 body {
@@ -164,7 +164,7 @@ body {
     }
     
     .menutitle-ch {
-        font-family: 'impact';
+        font-family: 'Hanyilin';
         text-decoration: none;
         color: black;
         height: 100%;
