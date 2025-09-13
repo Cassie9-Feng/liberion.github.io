@@ -136,7 +136,7 @@ body {
     
     .menu-box {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         list-style: none;
         height: 1.2rem;
         width: 90%;
