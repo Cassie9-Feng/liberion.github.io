@@ -94,6 +94,10 @@
     font-family: 'tenorite';
     src: url('https://static.igem.wiki/teams/5184/fonts/tenorite.woff');
 }
+@font-face {
+    font-family: 'Hanyilin';
+    src: url('');
+}
 
 body {
     margin: 0;
