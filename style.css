@@ -103,9 +103,13 @@ body {
     margin: 0;
     height: 200vh;
     overflow-x: hidden;
-    background: linear-gradient(#3d3b42, #7597de);
+   background-color: #1c0522;
 }
-
+  
+        
+        .background-picture {
+            background: linear-gradient(#211a32, #7597de);
+        }
     .nav-flex {
         background-color: #ffffff;
         z-index: 111;
