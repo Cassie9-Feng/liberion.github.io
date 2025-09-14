@@ -146,6 +146,37 @@
             btn.style.marginTop = value * 1.5 + 'px'
             header.style.top = value * 0.5 + 'px'
         })
+
+        
+        gsap.registerPlugin(ScrollTrigger);
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // 计算横向滚动总宽度
+            const scrollElement = document.querySelector('.horizontal-scroll');
+            const scrollWidth = scrollElement.scrollWidth;
+            const viewportWidth = window.innerWidth;
+
+            // 设置GSAP动画
+            gsap.to(".horizontal-scroll", {
+                x: () => -(scrollWidth - viewportWidth) + "px",
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".horizontal-scroll-section",
+                    start: "top top",
+                    end: () => "+=" + (scrollWidth - viewportWidth),
+                    pin: true,
+                    scrub: 1,
+                    markers: false, // 调试
+                    anticipatePin: 1,
+                    invalidateOnRefresh: true
+                }
+            });
+
+
+            window.addEventListener('resize', function() {
+                ScrollTrigger.refresh();
+            });
+        });
     </script>
 
 </body>
