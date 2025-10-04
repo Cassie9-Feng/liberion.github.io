@@ -392,8 +392,10 @@ section img#mountains_front {
 }
 
 .sec p {
-    font-size: 1em;
     color: #fff;
+     text-align: center;
+            font-size: 1.6em; 
+            font-family: 'xiangcui';
 }
 .horizontal-scroll-section {
             width: 100%;
