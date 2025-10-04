@@ -98,7 +98,15 @@
     font-family: 'Hanyilin';
     src: url('fonts/HanYiLingXinTiJian-1.ttf');
 }
-
+  @font-face {
+            font-family: 'pixel';
+            src: url('fonts/MZPXorig.ttf');
+        }
+        
+        @font-face {
+            font-family: 'xiangcui';
+            src: url('fonts/香萃打字机体 W15.ttf');
+        }
 body {
     margin: 0;
     height: 200vh;
@@ -353,12 +361,30 @@ section img#mountains_front {
     transform: translateY(100px);
 }
 
-.sec {
-    position: relative;
-    padding: 10vw 20vw;
-    background: #1c0522;
-}
-
+ .sec {
+            position: relative;
+            padding: 5vw 10vw;
+            background: #1c0522;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+            transform: translateX(60%);
+            transition: all 0.8s ease;
+            opacity: 0.2;
+        }
+        
+        .sec:nth-of-type(even) {
+            transform: translateX(-60%);
+        }
+        
+        .sec.show {
+            transform: translateX(0);
+            opacity: 1;
+            transition: all 0.8s ease;
+        }
+        
 .sec h2 {
     font-size: 3.5em;
     margin-bottom: 10px;
@@ -442,4 +468,28 @@ section img#mountains_front {
             font-size: 2rem;
             text-align: center;
             padding: 2rem;
+        }
+
+        .typewords {
+            font-style: italic;
+            font-size: 3rem;
+            font-family: 'pixel';
+        }
+        
+        span.mark {
+            height: 3rem;
+            margin-left: 10px;
+            border-right: 2px solid white;
+            transform: skew(-15deg);
+            animation: blink 0.6s step-end infinite;
+        }
+        
+        @keyframes blink {
+            from,
+            to {
+                border-color: transparent;
+            }
+            50% {
+                border-color: white;
+            }
         }
