@@ -107,6 +107,11 @@
             font-family: 'xiangcui';
             src: url('fonts/香萃打字机体 W15.ttf');
         }
+
+html{
+     scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     height: 200vh;
