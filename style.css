@@ -500,6 +500,7 @@ section img#mountains_front {
          .team-container {
             max-width: 1200px;
             margin: 0 auto;
+              padding-top: 1px;
         }
          .team-header {
             text-align: center;
