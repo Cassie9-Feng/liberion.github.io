@@ -37,5 +37,256 @@
    
     <span class="zh-text">中文</span>
 </button>
+  <div class="team-container">
+        <div class="team-header">
+            <h1>团队成员介绍</h1>
+
+        </div>
+
+        <div class="main-content">
+            <div class="avatar-section">
+                <div class="avatar">
+                    <img id="main-avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Lucas Niacis">
+                </div>
+            </div>
+
+            <div class="info-section">
+          
+                <div class="member-header">
+                    <h2 class="member-name" id="member-name">Lucas Niacis</h2>
+                    <span class="separator">|</span>
+                    <p class="member-title" id="member-title">化学研究员</p>
+                </div>
+                <div class="member-description" id="member-description">
+                    Lucas是一位专注于有机化学和材料科学的研究员。他在纳米材料合成领域拥有超过8年的研究经验，曾参与多个国际合作项目。Lucas在《自然化学》和《美国化学会志》等顶级期刊上发表过多篇论文，并持有三项专利。他目前的研究方向是新型催化剂的开发与应用。
+                </div>
+            </div>
+        </div>
+
+        <div class="thumbnail-section">
+
+            <div class="thumbnails-container">
+                <button class="nav-btn prev-btn" id="prev-btn">❮</button>
+                <div class="thumbnails-wrapper" id="thumbnails-wrapper">
+                    <div class="thumbnails" id="thumbnails">
+                  
+                    </div>
+                </div>
+                <button class="nav-btn next-btn" id="next-btn">❯</button>
+            </div>
+            <div class="member-counter">
+                <span id="current-member">1</span> / <span id="total-members">15</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        const members = [{
+            id: 1,
+            name: "Lucas Niacis",
+            title: "化学研究员",
+            avatar: "https://cassie9-feng.github.io/liberion.github.io/images/team-head.png",
+            description: "What follows is a preliminary character profile, designed to outline the fundamental attributes and background story of this individual."
+        }, {
+            id: 2,
+            name: "XXX",
+            title: "XXX",
+            avatar: "https://cassie9-feng.github.io/liberion.github.io/images/team-head.png",
+            description: "What follows is a preliminary character profile, designed to outline the fundamental attributes and background story of this individual."
+        }, {
+            id: 3,
+            name: "XXX",
+            title: "XXX",
+            avatar: "https://cassie9-feng.github.io/liberion.github.io/images/team-head.png",
+            description: "What follows is a preliminary character profile, designed to outline the fundamental attributes and background story of this individual."
+        }, {
+            id: 4,
+            name: "XXX",
+            title: "XXX",
+            avatar: "https://cassie9-feng.github.io/liberion.github.io/images/team-head.png",
+            description: "What follows is a preliminary character profile, designed to outline the fundamental attributes and background story of this individual."
+        }, {
+            id: 5,
+            name: "XXX",
+            title: "XXX",
+            avatar: "https://cassie9-feng.github.io/liberion.github.io/images/team-head.png",
+            description: "What follows is a preliminary character profile, designed to outline the fundamental attributes and background story of this individual."
+        }, {
+            id: 6,
+            name: "XXX",
+            title: "XXX",
+            avatar: "https://cassie9-feng.github.io/liberion.github.io/images/team-head.png",
+            description: "What follows is a preliminary character profile, designed to outline the fundamental attributes and background story of this individual."
+        }, {
+            id: 7,
+            name: "XXX",
+            title: "XXX",
+            avatar: "https://cassie9-feng.github.io/liberion.github.io/images/team-head.png",
+            description: "What follows is a preliminary character profile, designed to outline the fundamental attributes and background story of this individual."
+        }, {
+            id: 8,
+            name: "XXX",
+            title: "XXX",
+            avatar: "https://cassie9-feng.github.io/liberion.github.io/images/team-head.png",
+            description: "What follows is a preliminary character profile, designed to outline the fundamental attributes and background story of this individual."
+        }, {
+            id: 9,
+            name: "XXX",
+            title: "XXX",
+            avatar: "https://cassie9-feng.github.io/liberion.github.io/images/team-head.png",
+            description: "What follows is a preliminary character profile, designed to outline the fundamental attributes and background story of this individual."
+        }, {
+            id: 10,
+            name: "XXX",
+            title: "XXX",
+            avatar: "https://cassie9-feng.github.io/liberion.github.io/images/team-head.png",
+            description: "What follows is a preliminary character profile, designed to outline the fundamental attributes and background story of this individual."
+        }, {
+            id: 11,
+            name: "XXX",
+            title: "XXX",
+            avatar: "https://cassie9-feng.github.io/liberion.github.io/images/team-head.png",
+            description: "What follows is a preliminary character profile, designed to outline the fundamental attributes and background story of this individual."
+        }, {
+            id: 12,
+            name: "XXX",
+            title: "XXX",
+            avatar: "https://cassie9-feng.github.io/liberion.github.io/images/team-head.png",
+            description: "What follows is a preliminary character profile, designed to outline the fundamental attributes and background story of this individual."
+        }, {
+            id: 13,
+            name: "XXX",
+            title: "XXX",
+            avatar: "https://cassie9-feng.github.io/liberion.github.io/images/team-head.png",
+            description: "What follows is a preliminary character profile, designed to outline the fundamental attributes and background story of this individual."
+        }, {
+            id: 14,
+            name: "XXX",
+            title: "XXX",
+            avatar: "https://cassie9-feng.github.io/liberion.github.io/images/team-head.png",
+            description: "What follows is a preliminary character profile, designed to outline the fundamental attributes and background story of this individual."
+        }, {
+            id: 15,
+            name: "XXX",
+            title: "XXX",
+            avatar: "https://cassie9-feng.github.io/liberion.github.io/images/team-head.png",
+            description: "What follows is a preliminary character profile, designed to outline the fundamental attributes and background story of this individual."
+        }];
+
+        // DOM元素
+        const mainAvatar = document.getElementById('main-avatar');
+        const memberName = document.getElementById('member-name');
+        const memberTitle = document.getElementById('member-title');
+        const memberDescription = document.getElementById('member-description');
+        const thumbnailsContainer = document.getElementById('thumbnails');
+        const thumbnailsWrapper = document.getElementById('thumbnails-wrapper');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const currentMemberSpan = document.getElementById('current-member');
+        const totalMembersSpan = document.getElementById('total-members');
+
+        // 当前选中的成员索引
+        let currentMemberIndex = 0;
+
+        // 初始化缩略图
+        function initThumbnails() {
+            members.forEach((member, index) => {
+                const thumbnail = document.createElement('div');
+                thumbnail.className = `thumbnail ${index === currentMemberIndex ? 'active' : ''}`;
+                thumbnail.dataset.id = member.id;
+
+                const img = document.createElement('img');
+                img.src = member.avatar;
+                img.alt = member.name;
+
+                thumbnail.appendChild(img);
+                thumbnailsContainer.appendChild(thumbnail);
+
+                // 点击缩略图切换成员
+                thumbnail.addEventListener('click', () => {
+                    updateMemberInfo(index);
+                    scrollToThumbnail(index);
+                });
+            });
+
+            // 设置总成员数
+            totalMembersSpan.textContent = members.length;
+        }
+
+        // 滚动到指定缩略图
+        function scrollToThumbnail(index) {
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            if (thumbnails[index]) {
+                const thumbnail = thumbnails[index];
+                const wrapper = thumbnailsWrapper;
+                const wrapperRect = wrapper.getBoundingClientRect();
+                const thumbnailRect = thumbnail.getBoundingClientRect();
+
+                const scrollLeft = thumbnail.offsetLeft - (wrapper.offsetWidth / 2) + (thumbnail.offsetWidth / 2);
+                wrapper.scrollTo({
+                    left: scrollLeft,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // 更新成员信息
+        function updateMemberInfo(index) {
+            currentMemberIndex = index;
+            const member = members[index];
+
+            // 更新主内容
+            mainAvatar.src = member.avatar;
+            memberName.textContent = member.name;
+            memberTitle.textContent = member.title;
+            memberDescription.textContent = member.description;
+
+            // 更新缩略图状态
+            document.querySelectorAll('.thumbnail').forEach((thumb, i) => {
+                if (i === index) {
+                    thumb.classList.add('active');
+                } else {
+                    thumb.classList.remove('active');
+                }
+            });
+
+            // 更新计数器
+            currentMemberSpan.textContent = index + 1;
+
+            // 更新导航按钮状态
+            updateNavButtons();
+        }
+
+        // 更新导航按钮状态
+        function updateNavButtons() {
+            prevBtn.disabled = currentMemberIndex === 0;
+            nextBtn.disabled = currentMemberIndex === members.length - 1;
+        }
+
+        // 导航按钮事件
+        prevBtn.addEventListener('click', () => {
+            if (currentMemberIndex > 0) {
+                const newIndex = currentMemberIndex - 1;
+                updateMemberInfo(newIndex);
+                scrollToThumbnail(newIndex);
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentMemberIndex < members.length - 1) {
+                const newIndex = currentMemberIndex + 1;
+                updateMemberInfo(newIndex);
+                scrollToThumbnail(newIndex);
+            }
+        });
+
+        // 初始化
+        initThumbnails();
+        updateMemberInfo(currentMemberIndex);
+    </script>
+
+
+
 </body>
 </html>
