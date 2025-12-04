@@ -784,3 +784,10 @@ section img#mountains_front {
                 /* 上下浮动效果 */
             }
         }
+
+  #pdf-container {
+            width: 100%;
+            height: 600px;
+            overflow: auto;
+            border: 1px solid #ccc;
+        }
