@@ -38,4 +38,36 @@
     <span class="zh-text">中文</span>
 </button>
 </body>
+    
+<div id="pdf-container"></div>
+
+      <script>
+        const url = 'file.pdf';
+        
+        // 加载PDF
+        pdfjsLib.getDocument(url).promise.then(function(pdf) {
+            const container = document.getElementById('pdf-container');
+            
+         
+            for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+                pdf.getPage(pageNum).then(function(page) {
+                    const canvas = document.createElement('canvas');
+                    const context = canvas.getContext('2d');
+                    const viewport = page.getViewport({ scale: 1.5 });
+                    
+                    canvas.height = viewport.height;
+                    canvas.width = viewport.width;
+                    canvas.style.marginBottom = '10px';
+                    
+                    container.appendChild(canvas);
+                    
+                    page.render({
+                        canvasContext: context,
+                        viewport: viewport
+                    });
+                });
+            }
+        });
+    </script>
 </html>
+
