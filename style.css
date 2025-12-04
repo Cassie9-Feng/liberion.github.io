@@ -785,9 +785,3 @@ section img#mountains_front {
             }
         }
 
-  #pdf-container {
-            width: 60%;
-            height: 600px;
-            overflow: auto;
-            border: 1px solid #ccc;
-        }
