@@ -791,3 +791,9 @@ section img#mountains_front {
     align-items: center;
     height: 100vh;
 }
+
+ iframe {
+        width: 60%;
+        height: 80%;
+        border: none;
+    }
