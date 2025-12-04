@@ -786,7 +786,7 @@ section img#mountains_front {
         }
 
   #pdf-container {
-            width: 100%;
+            width: 60%;
             height: 600px;
             overflow: auto;
             border: 1px solid #ccc;
