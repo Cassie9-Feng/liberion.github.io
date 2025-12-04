@@ -785,3 +785,9 @@ section img#mountains_front {
             }
         }
 
+.pdf-center-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
